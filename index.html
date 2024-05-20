@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			background-color: rgb(125, 219, 228);
+			display: flex;
+			justify-content: center;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			width: 1100px;
+			height: auto;
+			border: 15px double rgb(17, 169, 22);
+			margin-top: 100px;
+			justify-content: center;
+			gap: 16px; 
+			padding: 16px;
+            background-image: url(https://papik.pro/uploads/posts/2022-01/thumbs/1641132008_51-papik-pro-p-besshovnii-risunok-detskii-60.jpg);
+            
+		}
+		img {
+			margin-top: -5px;
+            width:70px;
+			height: 70px;
+			transition: 1s;
+		}
+		img:hover{
+			transform: scale(1.4);
+			transition: 1s;
+			cursor: pointer;
+		}
+
+		.block-item {
+			border: 4px solid rgb(44, 142, 2);
+            box-shadow: 10px 0px 5px rgb(91, 90, 90);
+			width: 120px;
+			height: 170px;
+			margin: 10px;
+			text-align: center;
+			border-radius: 20px;
+			padding: 6px;
+			box-sizing: border-box;
+			transition: 1s;
+			/* flex: 1 1 calc(33.333% - 32px); Three blocks per row with space */
+			/* min-width: 200px; */
+		}
+		.block-item:hover{
+			transform: scale(1.4);
+			transition: 1s;
+			cursor: pointer;
+		}
+		.block-item[block-color='1'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+        .block-item[block-color='2'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+
+            
+            
+		}
+        .block-item[block-color='3'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+        .block-item[block-color='4'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+		[block-color='5'],
+		[block-color='6'],
+		[block-color='7'], 
+		[block-color='8'], 
+		[block-color='9'],
+		[block-color='10'],
+		[block-color='11'],
+		[block-color='13'], 
+		[block-color='12'], 
+		[block-color='14'],
+		[block-color='15'],
+		[block-color='16'],
+		[block-color='17'], 
+		[block-color='18'], 
+		[block-color='19'],
+		[block-color='20'],
+		[block-color='21'],
+		[block-color='22'], 
+		[block-color='23'], 
+		[block-color='24'],
+		[block-color='25'],
+		[block-color='26'],
+		[block-color='27'], 
+		[block-color='28'], 
+		[block-color='29'],
+		[block-color='30'],
+		[block-color='31'],
+		[block-color='32'], 
+		[block-color='33'], 
+		[block-color='34'],
+		[block-color='35'],
+		[block-color='36']{
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+		
+		div {
+			color: rgb(199, 33, 75);
+			font-size: 25px;
+			font-weight: bold;
+		}
+		.responsive-img {
+			width: 100%;
+			height: auto;
+			display: block;
+            
+		}
+		.title {
+			border-bottom: 3px solid rgb(44, 142, 2);
+			background-color: rgb(228, 236, 4);
+			color: rgb(245, 14, 33);
+			border-radius: 10px;
+			box-shadow: 3px 0px 5px rgb(79, 77, 77);
+			font-size: 1em;
+			width: 50px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            border: 2px solid red;
+			transition: 1s;
+			margin-bottom: 8px;
+		}
+		.title:hover {
+			transform: scale(1.4);
+			transition: 1s;
+			cursor: pointer;
+		}
+		.des {
+			color: rgb(62, 9, 237);
+			font-size: 1.2rem;
+			margin-top: px;
+			
+		}
+			@media (max-width: 1024px) {
+				.block-item {
+					flex: 1 1 calc(20% - 40px); /* Two blocks per row */
+				}
+			}
+
+			@media (max-width: 768px) {
+				/* .block-item {
+					flex: 1 1 100%; /* One block per row */
+				/* } */ 
+				.block-item {
+					flex: 1 1 calc(25% - 50px); /* Two blocks per row */
+				}
+			}
+			@media (max-width: 600px) {
+				.block-item {
+					flex: 1 1 calc(20% - 20px); /* Two blocks per row */
+				}
+			}
+			@media (max-width: 450px) {
+				.block-item {
+					flex: 1 1 calc(40% - 50px); /* Two blocks per row */
+				}
+				.title{
+					font-size: 20px;
+				}
+			}
+		
+	</style>
+
+	<body>
+		
+		<script>
+			const data = [
+				{
+					title: 'Aa',
+					image: 'img/1.png',
+					description: 'Алма',
+				},
+				{
+					title: 'Бб',
+					image: 'img/2.gif',
+					description: 'Балык',
+				
+				},
+				{
+					title: 'Вв',
+					image: 'img/3.png',
+					description: 'Велосипед',
+				},
+				{
+					title: 'Гг',
+					image: 'img/4.png',
+					description: 'ГYЛ',
+			
+				},
+				{
+					title: 'Дд',
+					image: 'img/5.png',
+					description: 'Дарбыз',
+				
+				},
+				{
+					title: 'Ее',
+					image: 'img/6.gif',
+					description: 'Енот',
+			
+				},
+				{
+					title: 'Ёё',
+					image: 'img/7.png',
+					description: 'Ёжик',
+				},
+				{
+					title: 'Жж',
+					image: 'img/9.gif',
+					description: 'Жылан',
+				},
+				{
+					title: 'Зз',
+					image: 'img/10.gif',
+					description: 'Зебра',
+				},
+                {	title: 'Ии',
+					image: 'img/11.gif',
+					description: 'Ит',
+				},
+				{
+					title: 'Йй',
+					image: 'img/12.gif',
+					description: 'Йогурт',
+				
+				},
+				{
+					title: 'Кк',
+					image: 'img/13.png',
+					description: 'Кой',
+				},
+				{
+					title: 'Лл',
+					image: 'img/14.gif',
+					description: 'Лимон',
+			
+				},
+				{
+					title: 'Мм',
+					image: 'img/15.gif',
+					description: 'Мышык',
+			
+				},
+				{
+					title: 'Нн',
+					image: 'img/16.png',
+					description: 'Нан',
+			
+				},
+				{
+					title: 'Ңң',
+					image: 'img/17.png',
+					description: 'ЖаҢгак',
+				},
+				{
+					title: 'Оо',
+					image: 'img/18.png',
+					description: 'Орок',
+				},
+				{
+					title: 'Өө',
+					image: 'img/19.png',
+					description: 'Өрдөк',
+				},
+				{
+					title: 'Пп',
+					image: 'img/20.png',
+					description: 'Парашут',
+				},
+				{
+					title: 'Рр',
+					image: 'img/21.gif',
+					description: 'Ракета',
+				},
+				{
+					title: 'Сс',
+					image: 'img/22gif.gif ',
+					description: 'Саат',
+				},
+				{
+					title: 'Тт',
+					image: 'img/23.gif ',
+					description: 'Тоок',
+				},
+				{
+					title: 'Уу',
+					image: 'img/24.gif ',
+					description: 'Уй',
+				},
+				{
+					title: 'Үү',
+					image: 'img/25.png ',
+					description: 'Үтүк',
+				},
+				{
+					title: 'Фф',
+					image: 'img/26.gif ',
+					description: 'Фонтан',
+				},
+				{
+					title: 'Хх',
+					image: 'img/27.png ',
+					description: 'Хомяк',
+				},
+				{
+					title: 'Цц',
+					image: 'img/28.gif ',
+					description: 'Цирк',
+				},
+				{
+					title: 'Чч',
+					image: 'img/29.gif',
+					description: 'Чычкан',
+				},
+				{
+					title: 'Шш',
+					image: 'img/30.gif ',
+					description: 'Шыпыргы',
+				},
+				{
+					title: 'Щщ',
+					image: 'img/31.png',
+					description: 'Щетка',
+				},
+				{
+					title: 'Ъъ',
+					image: 'img/32.png',
+					description: 'Катуу белги',
+					color: '#f8ef87',
+				},
+				{
+					title: 'Ыы',
+					image: 'img/33.png',
+					description: 'Ышкырык',
+				},
+				{
+					title: 'Ьь',
+					image: 'img/34.png',
+					description: 'Жумшак белги',
+				},
+				{
+					title: 'Ээ',
+					image: 'img/35.gif ',
+					description: 'Эчки',
+				},
+				{
+					title: 'Юю',
+					image: 'img/36.png ',
+					description: 'Юбка',
+				},
+				{
+					title: 'Яя',
+					image: 'img/37.png ',
+					description: 'Якорь',
+				},
+			]
+
+			let container = document.createElement('div')
+			container.classList.add('container')
+
+			const renderBlock = () => {
+				let fragment = new DocumentFragment()
+
+				data.map((item, id) => {
+					console.log(id)
+					let block = document.createElement('div')
+					block.className = 'block-item'
+					block.setAttribute('block-color', id + 1)
+
+					block.classList.add('block')
+					// block.style.borderColor=item.color
+					// block.style.backgroundColor=item.color
+
+					block.innerHTML = `
+            <div class="title">${item.title}</div>
+            <img src="${item.image}">
+            <div class="des">${item.description}</div>`
+					fragment.append(block)
+				})
+				return fragment
+			}
+			container.append(renderBlock())
+			document.body.append(container)
+			
+		</script>
+	</body>
+</html>

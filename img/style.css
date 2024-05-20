@@ -1,0 +1,95 @@
+.container {
+			display: flex;
+			flex-wrap: wrap;
+			width: 1200px;
+			height: auto;
+			border: 15px double rgb(246, 8, 4);
+			margin-top: 100px;
+			justify-content: center;
+			gap: 16px; 
+			padding: 16px;
+            background-image: url(https://papik.pro/uploads/posts/2022-01/thumbs/1641132008_51-papik-pro-p-besshovnii-risunok-detskii-60.jpg);
+            
+		}
+		img {
+			margin-top: -5px;
+            width:60px;
+			height: 50px;
+		}
+
+		.block-item {
+			border: 4px solid rgb(44, 142, 2);
+            box-shadow: 10px 0px 5px rgb(91, 90, 90);
+			width: 120px;
+			height: 150px;
+			margin: 10px;
+			text-align: center;
+			border-radius: 20px;
+			padding: 6px;
+			box-sizing: border-box;
+			/* flex: 1 1 calc(33.333% - 32px); Three blocks per row with space */
+			/* min-width: 200px; */
+		}
+		.block-item[block-color='1'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+        .block-item[block-color='2'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+
+            
+            
+		}
+        .block-item[block-color='3'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+        .block-item[block-color='4'] {
+			border: 3px solid red;
+			background-color: rgba(10, 244, 76, 0.92);
+		}
+		div {
+			color: rgb(199, 33, 75);
+			font-size: 25px;
+			font-weight: bold;
+		}
+		.responsive-img {
+			width: 100%;
+			height: auto;
+			display: block;
+            
+		}
+		.title {
+			border-bottom: 3px solid rgb(44, 142, 2);
+			background-color: rgb(228, 236, 4);
+			color: rgb(245, 14, 33);
+			border-radius: 10px;
+			box-shadow: 10px 0px 5px gray;
+			font-size: 1em;
+			width: 40px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            border: 2px solid red;
+
+			margin-bottom: 8px;
+		}
+		.des {
+			color: rgb(62, 9, 237);
+			font-size: 1.2rem;
+			margin-top: 5px;
+		}
+			@media (max-width: 1024px) {
+				.block-item {
+					flex: 1 1 calc(50% - 32px); /* Two blocks per row */
+				}
+			}
+
+			@media (max-width: 768px) {
+				.block-item {
+					flex: 1 1 100%; /* One block per row */
+				}
+			}
+		
